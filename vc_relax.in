@@ -1,0 +1,56 @@
+
+&CONTROL
+  calculation = 'vc-relax'
+  outdir = './out/'
+  prefix = 'aiida'
+  etot_conv_thr =  3.00000e-06
+  forc_conv_thr =  1.00000e-05
+  tprnfor       = .TRUE.
+  tstress       = .TRUE.
+  pseudo_dir = './pseudo/'
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   2.0000000000d-02
+  ecutrho =   600
+  ecutwfc =   60
+  ibrav = 0
+  nat = 3
+  nosym = .false.
+  ntyp = 2
+  occupations = 'smearing'
+  smearing = 'cold'
+  assume_isolated = '2D'
+/
+&ELECTRONS
+  conv_thr =   6.0000000000d-10
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+&ions
+    ion_dynamics = 'bfgs',
+/
+&cell
+    cell_dynamics = 'bfgs',
+    press_conv_thr = 0.01,
+    cell_dofree = "2Dxy"
+/
+ATOMIC_SPECIES
+C      12.0107 C.pbe-n-rrkjus_psl.1.0.0.UPF
+Tc     98.0 Tc.pbe-spn-rrkjus_psl.0.3.0.UPF
+
+ATOMIC_POSITIONS (crystal)
+Tc               0.3333333141        0.6666666281        0.5604996225
+Tc               0.3333333141        0.6666666281        0.4395003874
+C                0.0000000000        0.0000000000        0.4999999821
+
+K_POINTS automatic
+17 17 1 0 0 0
+
+CELL_PARAMETERS (angstrom)
+   2.796948434   0.000000000   0.000000000
+  -1.398474218   2.422228397   0.000000000
+   0.000000000   0.000000000  21.940324783
+
+
+

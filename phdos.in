@@ -1,0 +1,11 @@
+&INPUT
+ flfrc = 'Tc2C_k441.fc'
+ fldos = 'matdyn.phdos'
+ flfrq = 'Tc2C.frq'
+   la2F = .true.
+    dos = .true.
+    asr = 'crystal'
+    nk1 = 36
+    nk2 = 36
+    nk3 = 1
+/

@@ -1,0 +1,17 @@
+phonon calculation.
+&inputph
+    prefix = "aiida"
+    outdir = "out"
+    recover = .true.
+    tr2_ph = 1.0d-16
+    ldisp = .true.
+    trans=.true.
+    fildvscf='pbdv'
+    alpha_mix = 0.4,
+    electron_phonon='interpolated',
+    el_ph_sigma=0.005, 
+    el_ph_nsigma=10,
+    nq1 = 3 nq2 = 3 nq3 = 1
+    fildyn = 'Tc2C.dyn'
+    
+/
